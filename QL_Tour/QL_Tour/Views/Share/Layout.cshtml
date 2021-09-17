@@ -1,0 +1,310 @@
+﻿<!doctype html>
+<html lang="en">
+    <head>
+        <title>Index</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="icon" href="~/images/favicon.png" type="image/x-icon">
+         <!--
+           http://go.microsft.com/fwlink/?LinkID=169433
+         -->
+        <!-- Google Fonts -->	
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i%7CMerriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+        
+        <!-- Bootstrap Stylesheet -->	
+        <link rel="stylesheet" href="~/css/bootstrap.min.css">
+        
+        <!-- Font Awesome Stylesheet -->
+        <link rel="stylesheet" href="~/css/font-awesome.min.css">
+            
+        <!-- Custom Stylesheets -->	
+        <link rel="stylesheet" href="~/css/style.css">
+        <link rel="stylesheet" id="cpswitch" href="~/css/orange.css">
+        <link rel="stylesheet" href="~/css/responsive.css">
+        <!-- Owl Carousel Stylesheet -->
+        <link rel="stylesheet" href="~/css/owl.carousel.css">
+        <link rel="stylesheet" href="~/css/owl.theme.css">
+        
+        <!-- Flex Slider Stylesheet -->
+        <link rel="stylesheet" href="~/css/flexslider.css" type="text/css" />
+        
+        <!--Date-Picker Stylesheet-->
+        <link rel="stylesheet" href="~/css/datepicker.css">
+        
+        <!-- Magnific Gallery -->
+        <link rel="stylesheet" href="~/css/magnific-popup.css">
+       
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+          <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="icon" href="images/favicon.png" type="image/x-icon">
+        
+        <!-- Google Fonts -->	
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i%7CMerriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+        
+        <!-- Bootstrap Stylesheet -->	
+        <link rel="stylesheet" href="~/css/bootstrap.min.css">
+        
+        <!-- Font Awesome Stylesheet -->
+        <link rel="stylesheet" href="~/css/font-awesome.min.css">
+            
+        <!-- Custom Stylesheets -->	
+        <link rel="stylesheet" href="~/css/style.css">
+        <link rel="stylesheet" id="cpswitch" href="~/css/orange.css">
+        <link rel="stylesheet" href="~/css/responsive.css">
+        
+        <!--Date-Picker Stylesheet-->
+        <link rel="stylesheet" href="~/css/datepicker.css">
+        
+        <!-- Slick Stylesheet -->
+		<link rel="stylesheet" href="~/css/slick.css">
+        <link rel="stylesheet" href="~/css/slick-theme.css">
+        <style>
+             #back-to-top {
+            line-height: 29px;
+            width: 35px;
+            height: 35px;
+            font-size: 21px;
+            transition: .3s;
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+            z-index: 12;
+            color: #ff6a00;
+            box-shadow: 0px 0px 1px 0 rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border-radius: 50%;
+            border: 2px solid;
+            border-color: #ff6a00;
+            text-align: center;
+            cursor: pointer;
+            display: none;
+        }
+
+        #back-to-top:hover {
+            color: #fff;
+            background: #ff6a00;
+            border-color: #ff6a00;
+        }
+        </style>
+    </head>
+    
+    
+    <body id="main-homepage">
+    
+        <!--====== LOADER =====-->
+        <div class="loader"></div>
+    
+    
+    	<!--======== SEARCH-OVERLAY =========-->       
+        <div class="overlay">
+            <a href="javascript:void(0)" id="close-button" class="closebtn">&times;</a>
+            <div class="overlay-content">
+                <div class="form-center">
+                    <form>
+                    	<div class="form-group">
+                        	<div class="input-group">
+                        		<input type="text" class="form-control" placeholder="Search..." required />
+                            	<span class="input-group-btn"><button type="submit" class="btn"><span><i class="fa fa-search"></i></span></button></span>
+                            </div><!-- end input-group -->
+                        </div><!-- end form-group -->
+                    </form>
+                </div><!-- end form-center -->
+            </div><!-- end overlay-content -->
+        </div><!-- end overlay -->
+        
+        
+        <!--============= TOP-BAR ===========-->
+        <div id="top-bar" class="tb-text-white">
+            <div class="container">
+                <div class="row">          
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div id="info">
+                            <ul class="list-unstyled list-inline">
+                                <li><span><i class="fa fa-map-marker"></i></span>1 Bùi Xuân Phái, Tây Thạnh, Tân Phú, TP. Hồ Chí Minh</li>
+                                <li><span><i class="fa fa-phone"></i></span>0376437459</li>
+                            </ul>
+                        </div><!-- end info -->
+                    </div><!-- end columns -->
+                    
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div id="links">
+                            <ul class="list-unstyled list-inline">
+                                 <li>
+                                     <span style="color:white">Xin chào: </span> 
+                                        @if (Session["TaiKhoan"] != null)
+                                             {
+                                                   <span style="color:white">&nbsp;  @Session["tenTaiKhoan"].ToString() &nbsp;&nbsp;&nbsp;</span>
+                                  <a href= "@Url.Action("DangXuat", "NguoiDung")" ><i class="fa fa-lock"></i>Đăng xuất</a>
+                                             }
+                                        else{
+                                             <span style="color:white">&nbsp; Khách mới</span>
+                                        <li><a href="#"><span><i class="fa fa-lock"></i></span></a>@Html.ActionLink("Đăng nhập","DangNhap", "NguoiDung")</li>
+                                            }
+
+
+                                 </li>
+                             
+                               <li><a href="#"><span><i class="fa fa-plus"></i></span></a>@Html.ActionLink("Đăng kí","DangKy", "NguoiDung")</li>
+                               
+                            </ul>
+                        </div><!-- end links -->
+                    </div><!-- end columns -->				
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end top-bar -->
+		
+        <nav class="navbar navbar-default main-navbar navbar-custom navbar-white" id="mynavbar-1">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" id="menu-button">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>                        
+                    </button>
+                    <div class="header-search hidden-lg">
+                    	<a href="javascript:void(0)" class="search-button"><span><i class="fa fa-search"></i></span></a>
+                    </div>
+                    <a href="#" class="navbar-brand"><span><img src="~/images/LOGOO.png" alt="blog-img" style="width:200px; height:130px; margin-top:-50px; margin-left:-100px"/></span></a>
+                </div><!-- end navbar-header -->
+                
+                <div class="collapse navbar-collapse" id="myNavbar1">
+                    <ul class="nav navbar-nav navbar-right navbar-search-link">
+                        <li>@Html.ActionLink("TRANG CHỦ","ALLTour", "Tour")</li>
+                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">DU LỊCH TRONG NƯỚC<span><i class="fa fa-angle-down"></i></span></a>
+                            <ul class="dropdown-menu">
+                            	   @Html.Action("TrongNuoc", "LoaiTour")	
+                            </ul>			
+                        </li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">DU LỊCH NGOÀI NƯỚC<span><i class="fa fa-angle-down"></i></span></a>
+                            <ul class="dropdown-menu">
+                            	 @Html.Action("NgoaiNuoc", "LoaiTour")	
+                            </ul>			
+                        </li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">KHUYẾN MÃI</a>
+                        </li>
+                        <li class="dropdown">@Html.ActionLink("LIÊN HỆ","Thongtinlienhe", "LienHe")
+                        </li>
+                         <li class="dropdown">@Html.Action("GioHangPartail", "GioHang")</li>
+                		<li><a href="javascript:void(0)" class="search-button"><span><i class="fa fa-search"></i></span></a></li>
+                    </ul>
+                </div><!-- end navbar collapse -->
+            </div><!-- end container -->
+        </nav><!-- end navbar -->        
+		<!--========================= FLEX SLIDER =====================-->
+        @RenderBody()
+        <!--========================= NEWSLETTER-1 ==========================-->
+        <section id="newsletter-1" class="section-padding back-size newsletter"> 
+            <div class="container">
+                <div class="row">
+                	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2>ĐĂNG KÝ BẢN TIN CỦA CHÚNG TÔI</h2>
+                        <p>ĐĂNG KÍ ĐỂ NHẬN ĐƯỢC ƯU ĐÃI VÀ NHỮNG TOUR MỚI NHẤT VỀ CHÚNG TÔI</p>	
+                        <form>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="email" class="form-control input-lg" placeholder="Nhập địa chỉ Email của bạn" required/>
+                                    <span class="input-group-btn"><button class="btn btn-lg"><i class="fa fa-envelope"></i></button></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div><!-- end columns -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end newsletter-1 -->
+        
+        
+        <!--======================= FOOTER =======================-->
+        <section id="footer" class="ftr-heading-o ftr-heading-mgn-1">
+        
+            <div id="footer-top" class="banner-padding ftr-top-grey ftr-text-white">
+                <div class="container">
+                    <div class="row">
+						
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 footer-widget ftr-contact">
+                            <h3 class="footer-heading"><img src="~/images/LOGOO.png" class="img-responsive" alt="blog-img" style="width:200px; height:150px; margin-top:-100px"/></h3>
+                            <ul class="list-unstyled">
+                            	<li><span><i class="fa fa-map-marker"></i></span>1 Bùi Xuân Phái, Tây Thạnh, Tân Phú, TP.Hồ Chí Minh</li>
+                            	<li><span><i class="fa fa-phone"></i></span>+0376437459</li>
+                                <li><span><i class="fa fa-envelope"></i></span>phamthivi459@gmail.com</li>
+                            </ul>
+                        </div><!-- end columns -->
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 footer-widget ftr-about">
+                            <h3 class="footer-heading">KẾT NỐI VỚI CHÚNG TÔI</h3>
+                            <p>"Du lịch cho cuộc sống thêm hồng <br />
+                                Travel Dollars tận lòng phục vụ" <br /> 
+                                Liên hệ ngay để được nhận ưu đãi cho chuyến hành trình đầy thú vị của bạn. <br />
+                                Hotline: 1900 6067
+                                
+                            </p>
+                            <ul class="social-links list-inline list-unstyled">
+                            	<li><a href="#"><span><i class="fa fa-facebook"></i></span></a></li>
+                            	<li><a href="#"><span><i class="fa fa-twitter"></i></span></a></li>
+                                <li><a href="#"><span><i class="fa fa-google-plus"></i></span></a></li>
+                                <li><a href="#"><span><i class="fa fa-pinterest-p"></i></span></a></li>
+                                <li><a href="#"><span><i class="fa fa-instagram"></i></span></a></li>
+                                <li><a href="#"><span><i class="fa fa-linkedin"></i></span></a></li>
+                                <li><a href="#"><span><i class="fa fa-youtube-play"></i></span></a></li>
+                            </ul>
+                        </div><!-- end columns -->
+                         <div class="col-xs-12 col-sm-6 col-md-8 col-lg-5 footer-widget ftr-contact">
+                             
+                             <iframe src="https://www.google.com/maps/d/embed?mid=1wBcl2pug0wWHeL4trdlkuhG0VEarevoK" width="100%" height="300"></iframe>
+                        </div><!-- end columns -->
+                    </div><!-- end row -->
+                </div><!-- end container -->
+                 <div id="back-to-top" style="display: block;"><span class="fa fa-angle-up"></span></div>
+            </div><!-- end footer-top -->
+           
+        <script>
+            jQuery(document).ready(function ($) {
+                $(document).ready(function () {
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop() > 50) {
+                            $('.navbar').addClass('moving');
+                            $('#logo').attr('src', 'img/logo-dark.png');
+                        } else {
+                            $('.navbar').removeClass('moving');
+                            $('#logo').attr('src', 'img/logo-light.png');
+                        }
+
+                        if ($(this).scrollTop() > 250) {
+                            $('#back-to-top').fadeIn();
+                        } else {
+                            $('#back-to-top').fadeOut();
+                        }
+                    });
+
+                    $('#back-to-top').click(function () {
+                        return $('body, html').animate({ scrollTop: 0 }, 400), !1;
+                    });
+                });
+            });
+    </script>
+            
+        </section><!-- end footer -->
+        
+        
+        @*<!-- Page Scripts Starts -->
+        <script src="~/js/jquery.min.js"></script>
+        <script src="~/js/jquery.magnific-popup.min.js"></script>
+        <script src="~/js/bootstrap.min.js"></script>
+        <script src="~/js/jquery.flexslider.js"></script>
+        <script src="~/js/bootstrap-datepicker.js"></script>
+        <script src="~/js/owl.carousel.min.js"></script>
+        <script src="~/js/custom-navigation.js"></script>
+        <script src="~/js/custom-flex.js"></script>
+        <script src="~/js/custom-owl.js"></script>
+        <script src="~/js/custom-date-picker.js"></script>
+        <script src="~/js/custom-video.js"></script>*@
+        <!-- Page Scripts Ends -->
+        <link href="~/css/slick.css" rel="stylesheet" />
+         <script src="~/js/jquery.min.js"></script>
+        <script src="~/js/bootstrap.min.js"></script>
+        <script src="~/js/bootstrap-datepicker.js"></script>
+        <script src="~/js/slick.min.js"></script>
+        <script src="~/js/custom-navigation.js"></script>
+        <script src="~/js/custom-date-picker.js"></script>
+        <script src="~/js/custom-slick.js"></script>
+    </body>
+</html>

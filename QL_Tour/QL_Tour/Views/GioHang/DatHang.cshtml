@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "DatHang";
+    Layout = "~/Views/Share/Layout.cshtml";
+}
+<div class="booking-form">
+                                	<h3>Book Tour</h3>
+                                    <p>Find your dream tour today</p>
+                                    
+                                    <form>
+                                    	<div class="form-group">
+                                    		<input type="text" class="form-control" placeholder="Hướng dẫn viên"  name="MaHDV" required/>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                    		<input type="text" class="form-control" placeholder="Họ và tên" required/>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                    		<input type="email" class="form-control" placeholder="Email" required/>
+                                        </div>
+                                         <div class="form-group">
+                                    		<input id="txt_SoLuong" type="number" min="1" name="txt_SoLuong" style="width:50px"/>
+                                        </div>
+                                        <div class="form-group">
+                                    		<input type="text" class="form-control" placeholder="Phone" required/>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                    		<input type="text" class="form-control dpd3" placeholder="Ngày đặt" name="NgayBD" required/>
+                                        </div>
+                                        
+                                        <div class="row">
+                                        	<div class="col-sm-6 col-md-12 col-lg-6 no-sp-r">
+                                                <div class="form-group right-icon">
+                                                    <select class="form-control">
+                                                        <option selected>Người lớn</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-sm-6 col-md-12 col-lg-6 no-sp-l">    
+                                                <div class="form-group right-icon">
+                                                    <select class="form-control">
+                                                        <option selected>Trẻ em</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group right-icon">
+                                            <select class="form-control">
+                                                <option selected>Phương thức thanh toán</option>
+                                                <option>Momo</option>
+                                                <option>Thẻ tín dụng/Ghi nợ</option>
+                                                <option>Ví Airpay</option>
+                                            </select>
+                                            <i class="fa fa-angle-down"></i>
+                                        </div>
+                                        
+                                        <div class="checkbox custom-check">
+                                        	<input type="checkbox" id="check01" name="checkbox"/>
+                                            <label for="check01"><span><i class="fa fa-check"></i></span>Bằng cách tiếp tục, bạn đồng ý với các <a href="#">Điều khoản và điều kiện.</a></label>
+                                        </div>
+                                          <a href="@Url.Action("ThemGioHang","GioHang", new {@maSP = Model.MaTour, @strURL = Request.Url.ToString()})" >
+                        <input class="btn btn-block btn-orange" id="Submit1" type="submit" value="Xác nhận đặt chỗ" />
+                        </a>
+                                    </form>
+                                </div><!-- end booking-form -->

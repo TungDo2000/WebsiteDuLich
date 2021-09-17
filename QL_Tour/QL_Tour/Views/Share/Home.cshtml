@@ -1,0 +1,1527 @@
+﻿<!doctype html>
+<html lang="en">
+    <head>
+        <title>Index</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="icon" href="images/favicon.png" type="image/x-icon">
+         <!--
+     http://go.microsft.com/fwlink/?LinkID=169433
+     -->
+        <!-- Google Fonts -->	
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i%7CMerriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+        
+        <!-- Bootstrap Stylesheet -->	
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+        <!-- Font Awesome Stylesheet -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+            
+        <!-- Custom Stylesheets -->	
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" id="cpswitch" href="css/orange.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    
+        <!-- Owl Carousel Stylesheet -->
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.css">
+        
+        <!-- Flex Slider Stylesheet -->
+        <link rel="stylesheet" href="css/flexslider.css" type="text/css" />
+        
+        <!--Date-Picker Stylesheet-->
+        <link rel="stylesheet" href="css/datepicker.css">
+        
+        <!-- Magnific Gallery -->
+        <link rel="stylesheet" href="css/magnific-popup.css" />
+        <style>
+             #back-to-top {
+            line-height: 29px;
+            width: 35px;
+            height: 35px;
+            font-size: 21px;
+            transition: .3s;
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+            z-index: 12;
+            color: #ff6a00;
+            box-shadow: 0px 0px 1px 0 rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border-radius: 50%;
+            border: 2px solid;
+            border-color: #ff6a00;
+            text-align: center;
+            cursor: pointer;
+            display: none;
+        }
+
+        #back-to-top:hover {
+            color: #fff;
+            background: #ff6a00;
+            border-color: #ff6a00;
+        }
+        </style>
+    </head>
+    
+    
+    <body id="main-homepage">
+    
+        <!--====== LOADER =====-->
+        <div class="loader"></div>
+    
+    
+    	<!--======== SEARCH-OVERLAY =========-->       
+        <div class="overlay">
+            <a href="javascript:void(0)" id="close-button" class="closebtn">&times;</a>
+            <div class="overlay-content">
+                <div class="form-center">
+                    <form>
+                    	<div class="form-group">
+                        	<div class="input-group">
+                        		<input type="text" class="form-control" placeholder="Search..." required />
+                            	<span class="input-group-btn"><button type="submit" class="btn"><span><i class="fa fa-search"></i></span></button></span>
+                            </div><!-- end input-group -->
+                        </div><!-- end form-group -->
+                    </form>
+                </div><!-- end form-center -->
+            </div><!-- end overlay-content -->
+        </div><!-- end overlay -->
+        
+        
+        <!--============= TOP-BAR ===========-->
+        <div id="top-bar" class="tb-text-white">
+            <div class="container">
+                <div class="row">          
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div id="info">
+                            <ul class="list-unstyled list-inline">
+                                <li><span><i class="fa fa-map-marker"></i></span>1 Bùi Xuân Phái, Tây Thạnh, Tân Phú, TP. Hồ Chí Minh</li>
+                                <li><span><i class="fa fa-phone"></i></span>0376437459</li>
+                            </ul>
+                        </div><!-- end info -->
+                    </div><!-- end columns -->
+                    
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div id="links">
+                            <ul class="list-unstyled list-inline">
+                               <li>
+                                     <span style="color:white">Xin chào: </span> 
+                                        @if (Session["TaiKhoan"] != null)
+                                             {
+                                                   <span style="color:white">&nbsp;  @Session["tenTaiKhoan"].ToString() &nbsp;&nbsp;&nbsp;</span>
+                                  <a href= "@Url.Action("DangXuat", "NguoiDung")" ><i class="fa fa-lock"></i>Đăng xuất</a>
+                                             }
+                                        else{
+                                             <span style="color:white">&nbsp; Khách mới</span>
+                                        <li><a href="#"><span><i class="fa fa-lock"></i></span></a>@Html.ActionLink("Đăng nhập","DangNhap", "NguoiDung")</li>
+                                            }
+
+                                 </li>
+                                <li><a href="#"><span><i class="fa fa-plus"></i></span></a>@Html.ActionLink("Đăng kí","DangKy", "NguoiDung")</li>
+                            </ul>
+                        </div><!-- end links -->
+                    </div><!-- end columns -->				
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end top-bar -->
+		
+        <nav class="navbar navbar-default main-navbar navbar-custom navbar-white" id="mynavbar-1">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" id="menu-button">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>                        
+                    </button>
+                    <div class="header-search hidden-lg">
+                    	<a href="javascript:void(0)" class="search-button"><span><i class="fa fa-search"></i></span></a>
+                    </div>
+                    <a href="#" class="navbar-brand"><span><img src="images/LOGOO.png" alt="blog-img" style="width:200px; height:130px; margin-top:-50px; margin-left:-100px"/></span></a>
+                </div><!-- end navbar-header -->
+                
+                <div class="collapse navbar-collapse" id="myNavbar1">
+                    <ul class="nav navbar-nav navbar-right navbar-search-link">
+                        <li>@Html.ActionLink("TRANG CHỦ","ALLTour", "Tour")</li>
+                         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">DU LỊCH TRONG NƯỚC<span><i class="fa fa-angle-down"></i></span></a>
+                            <ul class="dropdown-menu">
+                            	   @Html.Action("TrongNuoc", "LoaiTour")	
+                            </ul>			
+                        </li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">DU LỊCH NGOÀI NƯỚC<span><i class="fa fa-angle-down"></i></span></a>
+                            <ul class="dropdown-menu">
+                            	 @Html.Action("NgoaiNuoc", "LoaiTour")	
+                            </ul>			
+                        </li>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">KHUYẾN MÃI</a>
+                        </li>
+                        <li class="dropdown">@Html.ActionLink("LIÊN HỆ","Thongtinlienhe", "LienHe")
+                        </li>
+                         <li class="dropdown">@Html.Action("GioHangPartail", "GioHang")</li>
+                		<li><a href="javascript:void(0)" class="search-button"><span><i class="fa fa-search"></i></span></a></li>
+                    </ul>
+                </div><!-- end navbar collapse -->
+            </div><!-- end container -->
+        </nav><!-- end navbar -->        
+		<!--========================= FLEX SLIDER =====================-->
+        <section class="flexslider-container" id="flexslider-container-1">
+
+            <div class="flexslider slider" id="slider-1">
+                <ul class="slides">
+                    
+                    <li class="item-1" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(images/AnhBia.jpg) 50% 0%;
+	background-size:cover;
+	height:100%;">
+                    	<div class=" meta">         
+                            <div class="container">
+                                <h2>Khám Phá</h2>
+                                <h1>Thế giới</h1>
+                                <a href="#" class="btn btn-default">XEM THÊM</a>
+                            </div><!-- end container -->  
+                        </div><!-- end meta -->
+                    </li><!-- end item-1 -->
+                    
+                    <li class="item-2" style="background:linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(images/AnhBiaTG.jpg) 0%;
+	background-size:cover;
+	height:100%;">
+                        <div class=" meta">         
+                            <div class="container">
+                                <h2>Khám Phá</h2>
+                                <h1>Địa Danh</h1>
+                                <a href="#" class="btn btn-default">XEM THÊM</a>
+                            </div><!-- end container -->  
+                        </div><!-- end meta -->
+                    </li><!-- end item-2 -->
+                   
+                </ul>
+            </div><!-- end slider -->
+            
+            <div class="search-tabs" id="search-tabs-1">
+            	<div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                        
+                            <ul class="nav nav-tabs center-tabs">
+                                <li class="active"><a href="#flights" data-toggle="tab"><span><i class="fa fa-plane"></i></span><span class="st-text">CHUYẾN BAY</span></a></li>
+                                <li><a href="#hotels" data-toggle="tab"><span><i class="fa fa-building"></i></span><span class="st-text">KHÁCH SẠN</span></a></li>
+                                <li><a href="#tours" data-toggle="tab"><span><i class="fa fa-suitcase"></i></span><span class="st-text">Tours</span></a></li>
+                                <li><a href="#cruise" data-toggle="tab"><span><i class="fa fa-ship"></i></span><span class="st-text">DU THUYỀN</span></a></li>
+                                <li><a href="#cars" data-toggle="tab"><span><i class="fa fa-car"></i></span><span class="st-text">Ô TÔ</span></a></li>
+                            </ul>
+        
+                            <div class="tab-content">
+
+                                <div id="flights" class="tab-pane in active">
+                                    <form>
+                                        <div class="row">
+
+                                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+                                                <div class="row">
+                                                
+                                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                                        <div class="form-group left-icon">
+                                                            <input type="text" class="form-control" placeholder="Điểm đi" >
+                                                            <i class="fa fa-map-marker"></i>
+                                                        </div>
+                                                    </div> <!--end columns -->
+                                                    
+                                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                                        <div class="form-group left-icon">
+                                                            <input type="text" class="form-control" placeholder="Điểm đến" >
+                                                            <i class="fa fa-map-marker"></i>
+                                                        </div>
+                                                    </div><!-- end columns 
+        
+                                                </div><!-- end row -->	
+                                                    </div>							
+                                            </div><!-- end columns -->
+                                            
+                                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+                                                <div class="row">
+                                                
+                                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                                        <div class="form-group left-icon">
+                                                            <input type="text" class="form-control dpd1" placeholder="Ngày đi" >
+                                                            <i class="fa fa-calendar"></i>
+                                                        </div>
+                                                    </div><!-- end columns -->
+                                                    
+                                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                                        <div class="form-group left-icon">
+                                                            <input type="text" class="form-control dpd2" placeholder="Ngày Về" >
+                                                            <i class="fa fa-calendar"></i>
+                                                        </div>
+                                                    </div><!-- end columns -->
+        
+                                                </div><!-- end row -->								
+                                            </div><!-- end columns -->
+                                            
+                                            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                                                <div class="form-group right-icon">
+                                                    <select class="form-control">
+                                                        <option selected>NGƯỜI LỚN</option>
+                                                        <option>TRẺ EM</option>
+                                                        <option>EM BÉ</option>
+                                                    </select>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </div>
+                                            </div><!-- end columns -->
+                                            
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 search-btn">
+                                                <button class="btn btn-orange">Search</button>
+                                            </div><!-- end columns -->
+                                            
+                                        </div><!-- end row -->
+                                    </form>
+                                </div><!-- end flights -->
+                                
+                                <div id="hotels" class="tab-pane">
+                                    <form>
+                                        <div class="row">
+                                            
+                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+                                                <div class="row">
+                                                
+                                                 <div class="col-xs-6 col-sm-6 col-md-6">
+                                                        <div class="form-group left-icon">
+                                                            <input type="text" class="form-control dpd1" placeholder="Ngày đi" >
+                                                            <i class="fa fa-calendar"></i>
+                                                        </div>
+                                                    </div><!-- end columns -->
+                                                    
+                                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                                        <div class="form-group left-icon">
+                                                            <input type="text" class="form-control dpd2" placeholder="Ngày Về" >
+                                                            <i class="fa fa-calendar"></i>
+                                                        </div>
+                                                    </div><!-- end columns -->
+        
+                                                </div><!-- end row -->								
+                                            </div><!-- end columns -->
+                                            
+                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+                                                <div class="row">
+                                                
+                                                    <div class="col-xs-12 col-sm-12 col-md-6">
+                                                        <div class="form-group right-icon">
+                                                            <select class="form-control">
+                                                                <option selected>PHÒNG</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                            </select>
+                                                            <i class="fa fa-angle-down"></i>
+                                                        </div>
+                                                    </div><!-- end columns -->
+                                                    
+                                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                                        <div class="form-group right-icon">
+                                                          <div class="form-group right-icon">
+                                                    <select class="form-control">
+                                                        <option selected>NGƯỜI LỚN</option>
+                                                        <option>TRẺ EM</option>
+                                                        <option>EM BÉ</option>
+                                                    </select>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </div>
+                                                            <i class="fa fa-angle-down"></i>
+                                                        </div>
+                                                    </div><!-- end columns -->
+                                                    
+                                                   
+                                                    
+                                                </div><!-- end row -->
+                                            </div><!-- end columns -->
+                                            
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 search-btn">
+                                                <button class="btn btn-orange">Search</button>
+                                            </div><!-- end columns -->
+                                            
+                                        </div><!-- end row -->
+                                    </form>
+                                </div><!-- end hotels -->
+
+                                <div id="tours" class="tab-pane">
+                                    <form>
+                                        <div class="row">
+                                        
+                                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+                                                <div class="form-group left-icon">
+                                                    <input type="text" class="form-control" placeholder="THÀNH PHỐ, QUỐC GIA" />
+                                                    <i class="fa fa-map-marker"></i>
+                                                </div>
+                                            </div><!-- end columns -->
+                                            
+                                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                                                <div class="form-group right-icon">
+                                                    <select class="form-control">
+                                                        <option selected>THÁNG</option>
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                        <option>6</option>
+                                                        <option>7</option>
+                                                        <option>8</option>
+                                                        <option>9</option>
+                                                        <option>10</option>
+                                                        <option>11</option>
+                                                        <option>12</option>
+                                                    </select>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </div>
+                                            </div><!-- end columns -->
+                                            
+                                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+                                                <div class="row">
+    
+                                                    <div class="col-xs-12 col-sm-10">
+                                                        <div class="form-group right-icon">
+                                                            <select class="form-control">
+                                                                <option selected>NGƯỜI LỚN</option>
+                                                                <option>TRẺ EM</option>
+                                                                <option>EM BÉ</option>
+                                                            </select>
+                                                            <i class="fa fa-angle-down"></i>
+                                                        </div>
+                                                    </div><!-- end columns -->
+                                                    
+                                                    
+                                                    
+                                                </div><!-- end row -->
+                                            </div><!-- end columns -->
+                                            
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 search-btn">
+                                                <button class="btn btn-orange">Search</button>
+                                            </div><!-- end columns -->
+                                            
+                                        </div><!-- end row -->
+                                    </form>
+                                </div><!-- end tours -->
+                                
+                                <div id="cruise" class="tab-pane">
+                                    <form>
+                                        <div class="row">
+                                            
+                                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+                                                <div class="row">
+                                                
+                                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                                        <div class="form-group left-icon">
+                                                            <input type="text" class="form-control" placeholder="ĐIỂM ĐẾN" >
+                                                            <i class="fa fa-map-marker"></i>
+                                                        </div>
+                                                    </div><!-- end columns -->
+                                                    
+                                                    <div class="col-xs-12 col-sm-6 col-md-6">
+                                                        <div class="form-group left-icon">
+                                                            <input type="text" class="form-control" placeholder="ĐIỂM ĐI" >
+                                                            <i class="fa fa-map-marker"></i>
+                                                        </div>
+                                                    </div><!-- end columns -->
+        
+                                                </div><!-- end row -->								
+                                            </div><!-- end columns -->
+                                            
+                                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+                                                <div class="row">
+                                                
+                                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                                        <div class="form-group left-icon">
+                                                            <input type="text" class="form-control dpd1" placeholder="NGÀY ĐI" >
+                                                            <i class="fa fa-calendar"></i>
+                                                        </div>
+                                                    </div><!-- end columns -->
+                                                    
+                                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                                        <div class="form-group left-icon">
+                                                            <input type="text" class="form-control dpd2" placeholder="NGÀY VỀ" >
+                                                            <i class="fa fa-calendar"></i>
+                                                        </div>
+                                                    </div><!-- end columns -->
+        
+                                                </div><!-- end row -->								
+                                            </div><!-- end columns -->
+                                            
+                                            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+                                                <div class="form-group right-icon">
+                                                    <select class="form-control">
+                                                     <option selected>NGƯỜI LỚN</option>
+                                                        <option>TRẺ EM</option>
+                                                        <option>EM BÉ</option>
+                                                    </select>
+                                                    <i class="fa fa-angle-down"></i>
+                                                </div>
+                                            </div><!-- end columns -->
+                                            
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 search-btn">
+                                                <button class="btn btn-orange">Search</button>
+                                            </div><!-- end columns -->
+                                            
+                                        </div><!-- end columns -->
+                                    </form>
+                                </div><!-- end cruises -->
+
+                                <div id="cars" class="tab-pane">
+                                    <form>					
+                                        <div class="row">
+                                        
+                                            <div class="col-xs-12 col-sm-12 col-md-7 col-lg-6">
+                                                <div class="row">
+                                                
+                                                    <div class="col-sm-6 col-md-4">
+                                                        <div class="form-group left-icon">
+                                                            <input type="text" class="form-control" placeholder="QUỐC GIA" />
+                                                            <i class="fa fa-globe"></i>
+                                                        </div>
+                                                    </div><!-- end columns -->
+                                                    
+                                                    <div class="col-sm-6 col-md-4">
+                                                        <div class="form-group left-icon">
+                                                            <input type="text" class="form-control" placeholder="THÀNH PHỐ" />
+                                                            <i class="fa fa-map-marker"></i>
+                                                        </div>
+                                                    </div><!-- end columns -->
+                                                    
+                                                    <div class="col-sm-12 col-md-4">
+                                                        <div class="form-group left-icon">
+                                                            <input type="text" class="form-control" placeholder="VỊ TRÍ" />
+                                                            <i class="fa fa-street-view"></i>
+                                                        </div>
+                                                    </div><!-- end columns -->
+                                                    
+                                                </div><!-- end row -->
+                                            </div><!-- end columns -->
+                                            
+                                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
+                                                <div class="row">
+                                                
+                                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                                        <div class="form-group left-icon">
+                                                            <input type="text" class="form-control dpd1" placeholder="NGÀY ĐI" >
+                                                            <i class="fa fa-calendar"></i>
+                                                        </div>
+                                                    </div><!-- end columns -->
+                                                    
+                                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                                        <div class="form-group left-icon">
+                                                            <input type="text" class="form-control dpd2" placeholder="NGÀY VỀ" >
+                                                            <i class="fa fa-calendar"></i>
+                                                        </div>
+                                                    </div><!-- end columns -->
+                                                    
+                                                </div><!-- end row -->
+                                            </div><!-- end columns -->
+    
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 search-btn">
+                                                <button class="btn btn-orange">Search</button>
+                                            </div><!-- end columns -->
+                                            
+                                        </div><!-- end row -->					
+                                    </form>
+                                </div><!-- end cars -->
+                                
+                            </div><!-- end tab-content -->
+                            
+                        </div><!-- end columns -->
+                    </div><!-- end row -->
+                </div><!-- end container -->
+            </div><!-- end search-tabs -->-->
+            
+        </section><!-- end flexslider-container -->
+        <!--=============== HOTEL OFFERS ===============-->
+          <section id="hotel-offers" class="section-padding">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-sm-12">
+                    	<div class="page-heading">
+                        	<h2>Hotels Offers</h2>
+                            <hr class="heading-line" />
+                        </div><!-- end page-heading -->
+                        
+                        <div class="owl-carousel owl-theme owl-custom-arrow" id="owl-hotel-offers">
+
+                         @RenderBody()
+                        </div><!-- end owl-hotel-offers -->
+                        
+                        <div class="view-all text-center">
+                        	<a href="#" class="btn btn-orange">View All</a>
+                        </div><!-- end view-all -->
+                    </div><!-- end columns -->
+                </div><!-- end row -->
+        	</div><!-- end container -->
+        </section><!-- end hotel-offers -->
+        <!--======================= BEST FEATURES =====================-->
+        <section id="best-features" class="banner-padding black-features">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-sm-6 col-md-3">
+                    	<div class="b-feature-block">
+                    		<span><i class="fa fa-dollar"></i></span>
+                        	<h3>Đảm bảo giá tốt nhất</h3>
+                            <p>Du lịch thoải ga không lo về giá.</p>
+                        </div><!-- end b-feature-block -->
+                   </div><!-- end columns -->
+                   
+                   <div class="col-sm-6 col-md-3">
+                    	<div class="b-feature-block">
+                    		<span><i class="fa fa-lock"></i></span>
+                        	<h3>An toàn và Bảo mật</h3>
+                            <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis.</p>
+                        </div><!-- end b-feature-block -->
+                   </div><!-- end columns -->
+                   
+                   <div class="col-sm-6 col-md-3">
+                    	<div class="b-feature-block">
+                    		<span><i class="fa fa-thumbs-up"></i></span>
+                        	<h3>Đại lý du lịch tốt nhất</h3>
+                            <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis.</p>
+                        </div><!-- end b-feature-block -->
+                   </div><!-- end columns -->
+                   
+                   <div class="col-sm-6 col-md-3">
+                    	<div class="b-feature-block">
+                    		<span><i class="fa fa-bars"></i></span>
+                        	<h3>Hướng dẫn Du lịch</h3>
+                            <p>Lorem ipsum dolor sit amet, ad duo fugit aeque fabulas, in lucilius prodesset pri. Veniam delectus ei vis.</p>
+                        </div><!-- end b-feature-block -->
+                   </div><!-- end columns -->
+                </div><!-- end row -->
+        	</div><!-- end container -->
+        </section><!-- end best-features -->
+                
+        
+        <!--=============== TOUR OFFERS ===============-->
+        <section id="tour-offers" class="section-padding">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-sm-12">
+                    	<div class="page-heading">
+                        	<h2>Tour Offers</h2>
+                            <hr class="heading-line" />
+                        </div><!-- end page-heading -->
+                        
+                         <div class="owl-carousel owl-theme owl-custom-arrow" id="owl-tour-offers">
+                            
+                            <div class="item">
+                                <div class="main-block tour-block">
+                                    <div class="main-img">
+                                    	<a href="#">
+                                        	<img src="images/tour-1.jpg" class="img-responsive" alt="tour-img" />
+                                    	</a>
+                                    </div><!-- end offer-img -->
+                                    
+                                    <div class="offer-price-2">
+                                        <ul class="list-unstyled">
+                                            <li class="price">$568.00<a href="#" ><span class="arrow"><i class="fa fa-angle-right"></i></span></a></li>
+                                        </ul>
+                                    </div><!-- end offer-price-2 -->
+                                        
+                                    <div class="main-info tour-info">
+                                    	<div class="main-title tour-title">
+                                            <a href="#">China Temple Tour</a>
+                                            <p>From: China</p>
+                                            <div class="rating">
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star grey"></i></span>
+                                            </div>
+                                        </div><!-- end tour-title -->
+                                    </div><!-- end tour-info -->
+                                </div><!-- end tour-block -->
+                            </div><!-- end item -->
+                            
+                            <div class="item">
+                                <div class="main-block tour-block">
+                                    <div class="main-img">
+                                        <a href="#">
+                                        	<img src="images/tour-2.jpg" class="img-responsive" alt="tour-img" />
+                                    	</a>
+                                    </div><!-- end offer-img -->
+                                    
+                                    <div class="offer-price-2">
+                                        <ul class="list-unstyled">
+                                            <li class="price">$745.00<a href="#" ><span class="arrow"><i class="fa fa-angle-right"></i></span></a></li>
+                                        </ul>
+                                    </div><!-- end offer-price-2 -->
+                                        
+                                    <div class="main-info tour-info">
+                                    	<div class="main-title tour-title">
+                                            <a href="#">African Safari Tour</a>
+                                            <p>From: Africa</p>
+                                            <div class="rating">
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star grey"></i></span>
+                                            </div>
+                                        </div><!-- end tour-title -->
+                                    </div><!-- end tour-info -->
+                                </div><!-- end tour-block -->
+                            </div><!-- end item -->
+                            
+                            <div class="item">
+                                <div class="main-block tour-block">
+                                    <div class="main-img">
+                                        <a href="#">
+                                        	<img src="images/tour-3.jpg" class="img-responsive" alt="tour-img" />
+                                    	</a>
+                                    </div><!-- end offer-img -->
+                                    
+                                    <div class="offer-price-2">
+                                        <ul class="list-unstyled">
+                                            <li class="price">$459.00<a href="#" ><span class="arrow"><i class="fa fa-angle-right"></i></span></a></li>
+                                        </ul>
+                                    </div><!-- end offer-price-2 -->
+                                        
+                                    <div class="main-info tour-info">
+                                    	<div class="main-title tour-title">
+                                            <a href="#">Paris City Tour</a>
+                                            <p>From: Paris</p>
+                                            <div class="rating">
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star grey"></i></span>
+                                            </div>
+                                        </div><!-- end tour-title -->
+                                    </div><!-- end tour-info -->
+                                </div><!-- end tour-block -->
+                            </div><!-- end item -->
+                            
+                            <div class="item">
+                                <div class="main-block tour-block">
+                                    <div class="main-img">
+                                        <a href="#">
+                                        	<img src="images/tour-4.jpg" class="img-responsive" alt="tour-img" />
+                                    	</a>
+                                    </div><!-- end offer-img -->
+                                    
+                                    <div class="offer-price-2">
+                                        <ul class="list-unstyled">
+                                            <li class="price">$745.00<a href="#" ><span class="arrow"><i class="fa fa-angle-right"></i></span></a></li>
+                                        </ul>
+                                    </div><!-- end offer-price-2 -->
+                                        
+                                    <div class="main-info tour-info">
+                                    	<div class="main-title tour-title">
+                                            <a href="#">China Temple Tour</a>
+                                            <p>From: China</p>
+                                            <div class="rating">
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star grey"></i></span>
+                                            </div>
+                                        </div><!-- end tour-title -->
+                                    </div><!-- end tour-info -->
+                                </div><!-- end tour-block -->
+                            </div><!-- end item -->
+                            
+                        </div><!-- end owl-tour-offers -->
+                        
+                        <div class="view-all text-center">
+                        	<a href="#" class="btn btn-orange">View All</a>
+                        </div><!-- end view-all -->
+                    </div><!-- end columns -->
+                </div><!-- end row -->
+        	</div><!-- end container -->
+        </section><!-- end tour-offers -->
+                     
+        
+        <!--=============== CRUISE OFFERS ===============-->
+        <section id="cruise-offers" class="section-padding">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-sm-12">
+                    	<div class="page-heading">
+                        	<h2>Cruise Offers</h2>
+                            <hr class="heading-line" />
+                        </div><!-- end page-heading -->
+                        
+                        <div class="row">
+                        	<div class="col-sm-6 col-md-6">
+                        		<div class="main-block cruise-block">
+                                	<div class="row">
+                                    	<div class="col-sm-12 col-md-6 col-md-push-6 no-pd-l">
+                                        	<div class="main-img cruise-img">
+                                            	<a href="#">
+                                                    <img src="images/cruise-1.jpg" class="img-responsive" alt="cruise-img"/>
+                                                    <div class="cruise-mask">
+                                                        <p>7 Nights, 6 Days</p>
+                                                    </div><!-- end cruise-mask -->
+                                                </a>
+                                            </div><!-- end cruise-img -->
+                                        </div><!-- end columns -->
+                                        
+                                		<div class="col-sm-12 col-md-6 col-md-pull-6 no-pd-r">
+                                        	<div class=" main-info cruise-info">
+                                                <div class="main-title cruise-title">
+                                                    <a href="#">Spain Boat Tour</a>
+                                                    <p>From: Italy to Spain</p>
+                                                    <div class="rating">
+                                                        <span><i class="fa fa-star orange"></i></span>
+                                                        <span><i class="fa fa-star orange"></i></span>
+                                                        <span><i class="fa fa-star orange"></i></span>
+                                                        <span><i class="fa fa-star orange"></i></span>
+                                                        <span><i class="fa fa-star grey"></i></span>
+                                                    </div><!-- end rating -->
+                                                    
+                                                	<span class="cruise-price">$950.00</span>
+                                                </div><!-- end cruise-title -->
+                                            </div><!-- end cruise-info -->
+                                        </div><!-- end columns -->
+                                        
+                                    </div><!-- end row -->	
+                                </div><!-- end cruise-block -->
+                        	</div><!-- end columns -->
+                            
+                            <div class="col-sm-6 col-md-6">
+                        		<div class="main-block cruise-block">
+                                	<div class="row">
+                                    	<div class="col-sm-12 col-md-6 col-md-push-6 no-pd-l">
+                                        	<div class="main-img cruise-img">
+                                            	<a href="#">
+                                                    <img src="images/cruise-2.jpg" class="img-responsive" alt="cruise-img"/>
+                                                    <div class="cruise-mask">
+                                                        <p>7 Nights, 6 Days</p>
+                                                    </div><!-- end cruise-mask -->
+                                                </a>
+                                            </div><!-- end cruise-img -->
+                                        </div><!-- end columns -->
+                                        
+                                		<div class="col-sm-12 col-md-6 col-md-pull-6 no-pd-r">
+                                        	<div class=" main-info cruise-info">
+                                                <div class="main-title cruise-title">
+                                                    <a href="#">Spain Boat Tour</a>
+                                                    <p>From: Italy to Spain</p>
+                                                    <div class="rating">
+                                                        <span><i class="fa fa-star orange"></i></span>
+                                                        <span><i class="fa fa-star orange"></i></span>
+                                                        <span><i class="fa fa-star orange"></i></span>
+                                                        <span><i class="fa fa-star orange"></i></span>
+                                                        <span><i class="fa fa-star grey"></i></span>
+                                                    </div><!-- end rating -->
+                                                    
+                                                	<span class="cruise-price">$950.00</span>
+                                                </div><!-- end cruise-title -->
+                                            </div><!-- end cruise-info -->
+                                        </div><!-- end columns -->
+                                        
+                                    </div><!-- end row -->	
+                                </div><!-- end cruise-block -->
+                        	</div><!-- end columns -->
+                            
+                            <div class="col-sm-6 col-md-6">
+                        		<div class="main-block cruise-block">
+                                	<div class="row">
+                                    	<div class="col-sm-12 col-md-6 col-md-push-6 no-pd-l">
+                                        	<div class="main-img cruise-img">
+                                            	<a href="#">
+                                                    <img src="images/cruise-3.jpg" class="img-responsive" alt="cruise-img"/>
+                                                    <div class="cruise-mask">
+                                                        <p>7 Nights, 6 Days</p>
+                                                    </div><!-- end cruise-mask -->
+                                                </a>
+                                            </div><!-- end cruise-img -->
+                                        </div><!-- end columns -->
+                                        
+                                		<div class="col-sm-12 col-md-6 col-md-pull-6 no-pd-r">
+                                        	<div class=" main-info cruise-info">
+                                                <div class="main-title cruise-title">
+                                                    <a href="#">Spain Boat Tour</a>
+                                                    <p>From: Italy to Spain</p>
+                                                    <div class="rating">
+                                                        <span><i class="fa fa-star orange"></i></span>
+                                                        <span><i class="fa fa-star orange"></i></span>
+                                                        <span><i class="fa fa-star orange"></i></span>
+                                                        <span><i class="fa fa-star orange"></i></span>
+                                                        <span><i class="fa fa-star grey"></i></span>
+                                                    </div><!-- end rating -->
+                                                    
+                                                	<span class="cruise-price">$950.00</span>
+                                                </div><!-- end cruise-title -->
+                                            </div><!-- end cruise-info -->
+                                        </div><!-- end columns -->
+                                        
+                                    </div><!-- end row -->	
+                                </div><!-- end cruise-block -->
+                        	</div><!-- end columns -->
+                            
+                            <div class="col-sm-6 col-md-6">
+                        		<div class="main-block cruise-block">
+                                	<div class="row">
+                                    	<div class="col-sm-12 col-md-6 col-md-push-6 no-pd-l">
+                                        	<div class="main-img cruise-img">
+                                            	<a href="#">
+                                                    <img src="images/cruise-4.jpg" class="img-responsive" alt="cruise-img"/>
+                                                    <div class="cruise-mask">
+                                                        <p>7 Nights, 6 Days</p>
+                                                    </div><!-- end cruise-mask -->
+                                                </a>
+                                            </div><!-- end cruise-img -->
+                                        </div><!-- end columns -->
+                                        
+                                		<div class="col-sm-12 col-md-6 col-md-pull-6 no-pd-r">
+                                        	<div class=" main-info cruise-info">
+                                                <div class="main-title cruise-title">
+                                                    <a href="#">Spain Boat Tour</a>
+                                                    <p>From: Italy to Spain</p>
+                                                    <div class="rating">
+                                                        <span><i class="fa fa-star orange"></i></span>
+                                                        <span><i class="fa fa-star orange"></i></span>
+                                                        <span><i class="fa fa-star orange"></i></span>
+                                                        <span><i class="fa fa-star orange"></i></span>
+                                                        <span><i class="fa fa-star grey"></i></span>
+                                                    </div><!-- end rating -->
+                                                    
+                                                	<span class="cruise-price">$950.00</span>
+                                                </div><!-- end cruise-title -->
+                                            </div><!-- end cruise-info -->
+                                        </div><!-- end columns -->
+                                        
+                                    </div><!-- end row -->	
+                                </div><!-- end cruise-block -->
+                        	</div><!-- end columns -->
+                        </div><!-- end row -->
+                        
+                        <div class="view-all text-center">
+                        	<a href="#" class="btn btn-orange">View All</a>
+                        </div><!-- end view-all -->
+                    </div><!-- end columns -->
+                </div><!-- end row -->
+        	</div><!-- end container -->
+        </section><!-- end cruise-offers -->
+        <!--================= FLIGHT OFFERS =============-->
+        <section id="flight-offers" class="section-padding">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-sm-12">
+                    	<div class="page-heading">
+                        	<h2>Flight Offers</h2>
+                            <hr class="heading-line" />
+                        </div><!-- end page-heading -->
+                        
+                        <div class="row">
+                        
+                        	<div class="col-sm-6 col-md-4">
+                                <div class="main-block flight-block">
+                                    <a href="#">
+                                        <div class="flight-img">
+                                            <img src="images/flight-1.jpg" class="img-responsive" alt="flight-img" />
+                                        </div><!-- end flight-img -->
+                                        
+                                        <div class="flight-info">
+                                            <div class="flight-title">
+                                                <h3><span class="flight-destination">Spain</span>|<span class="flight-type">OneWay Flight</span></h3>
+                                            </div><!-- end flight-title -->
+                                            
+                                            <div class=" flight-timing">
+                                                <ul class="list-unstyled">
+                                                    <li><span><i class="fa fa-plane"></i></span><span class="date">Aug, 02-2017 </span>(8:40 PM)</li>
+                                                    <li><span><i class="fa fa-plane"></i></span><span class="date">Aug, 03-2017 </span>(8:40 PM)</li>
+                                                </ul>
+                                            </div><!-- end flight-timing -->
+                                            
+                                            <ul class="list-unstyled list-inline offer-price-1">
+                                                <li class="price">$568.00<span class="pkg">Avg/Person</span></li>
+                                                <li class="rating">
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star lightgrey"></i></span>
+                                                </li>
+                                            </ul>
+                                        </div><!-- end flight-info -->
+                                    </a>
+                                </div><!-- end flight-block -->
+                            </div><!-- end columns -->
+                            
+                            <div class="col-sm-6 col-md-4">
+                                <div class="main-block flight-block">
+                                    <a href="#">
+                                        <div class="flight-img">
+                                            <img src="images/flight-2.jpg" class="img-responsive" alt="flight-img" />
+                                        </div><!-- end flight-img -->
+                                        
+                                        <div class="flight-info">
+                                            <div class="flight-title">
+                                                <h3><span class="flight-destination">Spain</span>|<span class="flight-type">OneWay Flight</span></h3>
+                                            </div><!-- end flight-title -->
+                                            
+                                            <div class=" flight-timing">
+                                                <ul class="list-unstyled">
+                                                    <li><span><i class="fa fa-plane"></i></span><span class="date">Aug, 02-2017 </span>(8:40 PM)</li>
+                                                    <li><span><i class="fa fa-plane"></i></span><span class="date">Aug, 03-2017 </span>(8:40 PM)</li>
+                                                </ul>
+                                            </div><!-- end flight-timing -->
+                                            
+                                            <ul class="list-unstyled list-inline offer-price-1">
+                                                <li class="price">$568.00<span class="pkg">Avg/Person</span></li>
+                                                <li class="rating">
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star lightgrey"></i></span>
+                                                </li>
+                                            </ul>
+                                        </div><!-- end flight-info -->
+                                    </a>
+                                </div><!-- end flight-block -->
+                            </div><!-- end columns -->
+                            
+                            <div class="col-sm-6 col-md-4">
+                                <div class="main-block flight-block">
+                                    <a href="#">
+                                        <div class="flight-img">
+                                            <img src="images/flight-3.jpg" class="img-responsive" alt="flight-img" />
+                                        </div><!-- end flight-img -->
+                                        
+                                        <div class="flight-info">
+                                            <div class="flight-title">
+                                                <h3><span class="flight-destination">Spain</span>|<span class="flight-type">OneWay Flight</span></h3>
+                                            </div><!-- end flight-title -->
+                                            
+                                            <div class=" flight-timing">
+                                                <ul class="list-unstyled">
+                                                    <li><span><i class="fa fa-plane"></i></span><span class="date">Aug, 02-2017 </span>(8:40 PM)</li>
+                                                    <li><span><i class="fa fa-plane"></i></span><span class="date">Aug, 03-2017 </span>(8:40 PM)</li>
+                                                </ul>
+                                            </div><!-- end flight-timing -->
+                                            
+                                            <ul class="list-unstyled list-inline offer-price-1">
+                                                <li class="price">$568.00<span class="pkg">Avg/Person</span></li>
+                                                <li class="rating">
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star lightgrey"></i></span>
+                                                </li>
+                                            </ul>
+                                        </div><!-- end flight-info -->
+                                    </a>
+                                </div><!-- end flight-block -->
+                            </div><!-- end columns -->
+                            
+                            <div class="col-sm-6 col-md-4">
+                                <div class="main-block flight-block">
+                                    <a href="#">
+                                        <div class="flight-img">
+                                            <img src="images/flight-4.jpg" class="img-responsive" alt="flight-img" />
+                                        </div><!-- end flight-img -->
+                                        
+                                        <div class="flight-info">
+                                            <div class="flight-title">
+                                                <h3><span class="flight-destination">Spain</span>|<span class="flight-type">OneWay Flight</span></h3>
+                                            </div><!-- end flight-title -->
+                                            
+                                            <div class=" flight-timing">
+                                                <ul class="list-unstyled">
+                                                    <li><span><i class="fa fa-plane"></i></span><span class="date">Aug, 02-2017 </span>(8:40 PM)</li>
+                                                    <li><span><i class="fa fa-plane"></i></span><span class="date">Aug, 03-2017 </span>(8:40 PM)</li>
+                                                </ul>
+                                            </div><!-- end flight-timing -->
+                                            
+                                            <ul class="list-unstyled list-inline offer-price-1">
+                                                <li class="price">$568.00<span class="pkg">Avg/Person</span></li>
+                                                <li class="rating">
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star lightgrey"></i></span>
+                                                </li>
+                                            </ul>
+                                        </div><!-- end flight-info -->
+                                    </a>
+                                </div><!-- end flight-block -->
+                            </div><!-- end columns -->
+                            
+                            <div class="col-sm-6 col-md-4">
+                                <div class="main-block flight-block">
+                                    <a href="#">
+                                        <div class="flight-img">
+                                            <img src="images/flight-5.jpg" class="img-responsive" alt="flight-img" />
+                                        </div><!-- end flight-img -->
+                                        
+                                        <div class="flight-info">
+                                            <div class="flight-title">
+                                                <h3><span class="flight-destination">Spain</span>|<span class="flight-type">OneWay Flight</span></h3>
+                                            </div><!-- end flight-title -->
+                                            
+                                            <div class=" flight-timing">
+                                                <ul class="list-unstyled">
+                                                    <li><span><i class="fa fa-plane"></i></span><span class="date">Aug, 02-2017 </span>(8:40 PM)</li>
+                                                    <li><span><i class="fa fa-plane"></i></span><span class="date">Aug, 03-2017 </span>(8:40 PM)</li>
+                                                </ul>
+                                            </div><!-- end flight-timing -->
+                                            
+                                            <ul class="list-unstyled list-inline offer-price-1">
+                                                <li class="price">$568.00<span class="pkg">Avg/Person</span></li>
+                                                <li class="rating">
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star lightgrey"></i></span>
+                                                </li>
+                                            </ul>
+                                        </div><!-- end flight-info -->
+                                    </a>
+                                </div><!-- end flight-block -->
+                            </div><!-- end columns -->
+                            
+                            <div class="col-sm-6 col-md-4">
+                                <div class="main-block flight-block">
+                                    <a href="#">
+                                        <div class="flight-img">
+                                            <img src="images/flight-6.jpg" class="img-responsive" alt="flight-img" />
+                                        </div><!-- end flight-img -->
+                                        
+                                        <div class="flight-info">
+                                            <div class="flight-title">
+                                                <h3><span class="flight-destination">Spain</span>|<span class="flight-type">OneWay Flight</span></h3>
+                                            </div><!-- end flight-title -->
+                                            
+                                            <div class=" flight-timing">
+                                                <ul class="list-unstyled">
+                                                    <li><span><i class="fa fa-plane"></i></span><span class="date">Aug, 02-2017 </span>(8:40 PM)</li>
+                                                    <li><span><i class="fa fa-plane"></i></span><span class="date">Aug, 03-2017 </span>(8:40 PM)</li>
+                                                </ul>
+                                            </div><!-- end flight-timing -->
+                                            
+                                            <ul class="list-unstyled list-inline offer-price-1">
+                                                <li class="price">$568.00<span class="pkg">Avg/Person</span></li>
+                                                <li class="rating">
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star lightgrey"></i></span>
+                                                </li>
+                                            </ul>
+                                        </div><!-- end flight-info -->
+                                    </a>
+                                </div><!-- end flight-block -->
+                            </div><!-- end columns -->
+                            
+                        </div><!-- end row -->
+                        
+                        <div class="view-all text-center">
+                        	<a href="#" class="btn btn-orange">View All</a>
+                        </div><!-- end view-all -->
+                    </div><!-- end columns -->
+                </div><!-- end row -->
+        	</div><!-- end container -->
+        </section><!-- end flight-offers -->
+        <!--================ VEHICLE OFFERS ==============-->
+        <section id="vehicle-offers" class="section-padding">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-sm-12">
+                    	<div class="page-heading">
+                        	<h2>Vehicle Offers</h2>
+                            <hr class="heading-line" />
+                        </div><!-- end page-heading -->
+                        
+                        <div class="row">
+                        	
+                            <div class="col-sm-6 col-md-4">
+                                <div class="main-block vehicle-block">
+                                    <div class="main-img vehicle-img">
+                                    	<a href="#">
+                                        	<img src="images/vehicle-1.jpg" class="img-responsive" alt="tour-img" />
+                                        </a>
+                                        <div class="vehicle-time">
+                                        	<p><span><i class="fa fa-clock-o"></i></span>22/h</p>
+                                        </div><!-- end vehicle-time -->
+                                    </div><!-- end vehicle-img -->
+                                    
+                                    <div class="offer-price-2">
+                                        <ul class="list-unstyled">
+                                            <li class="price">$89<a href="#" ><span class="arrow"><i class="fa fa-angle-right"></i></span></a></li>
+                                        </ul>
+                                    </div><!-- end offer-price-2 -->
+                                        
+                                    <div class="main-info vehicle-info">
+                                        <div class="main-title vehicle-title">
+                                            <a href="#">Mercedes Benz</a>
+                                            <p>Per Day</p>
+                                            <div class="rating">
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star lightgrey"></i></span>
+                                            </div>
+                                        </div><!-- end vehicle-title -->
+                                    </div><!-- end vehicle-info -->
+                                </div><!-- end vehicle-block -->
+                            </div><!-- end columns -->
+                        	
+                            <div class="col-sm-6 col-md-4">
+                                <div class="main-block vehicle-block">
+                                    <div class="main-img vehicle-img">
+                                        <a href="#">
+                                        	<img src="images/vehicle-2.jpg" class="img-responsive" alt="tour-img" />
+                                        </a>
+                                        <div class="vehicle-time">
+                                        	<p><span><i class="fa fa-clock-o"></i></span>22/h</p>
+                                        </div><!-- end vehicle-time -->
+                                    </div><!-- end vehicle-img -->
+                                    
+                                    <div class="offer-price-2">
+                                        <ul class="list-unstyled">
+                                            <li class="price">$99<a href="#" ><span class="arrow"><i class="fa fa-angle-right"></i></span></a></li>
+                                        </ul>
+                                    </div><!-- end offer-price-2 -->
+                                        
+                                    <div class="main-info vehicle-info">
+                                        <div class="main-title vehicle-title">
+                                            <a href="#">Ferrari</a>
+                                            <p>Per Day</p>
+                                            <div class="rating">
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star lightgrey"></i></span>
+                                            </div>
+                                        </div><!-- end vehicle-title -->
+                                    </div><!-- end vehicle-info -->
+                                </div><!-- end vehicle-block -->
+                            </div><!-- end columns -->
+                            
+                            <div class="col-sm-6 col-md-4">
+                                <div class="main-block vehicle-block">
+                                    <div class="main-img vehicle-img">
+                                        <a href="#">
+                                        	<img src="images/vehicle-3.jpg" class="img-responsive" alt="tour-img" />
+                                        </a>
+                                        <div class="vehicle-time">
+                                        	<p><span><i class="fa fa-clock-o"></i></span>22/h</p>
+                                        </div><!-- end vehicle-time -->
+                                    </div><!-- end vehicle-img -->
+                                    
+                                    <div class="offer-price-2">
+                                        <ul class="list-unstyled">
+                                            <li class="price">$79<a href="#" ><span class="arrow"><i class="fa fa-angle-right"></i></span></a></li>
+                                        </ul>
+                                    </div><!-- end offer-price-2 -->
+                                        
+                                    <div class="main-info vehicle-info">
+                                        <div class="main-title vehicle-title">
+                                            <a href="#">Range Rover</a>
+                                            <p>Per Day</p>
+                                            <div class="rating">
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star orange"></i></span>
+                                                <span><i class="fa fa-star lightgrey"></i></span>
+                                            </div>
+                                        </div><!-- end vehicle-title -->
+                                    </div><!-- end vehicle-info -->
+                                </div><!-- end vehicle-block -->
+                            </div><!-- end columns -->
+                            
+                        </div><!-- end row -->
+                        
+                        <div class="view-all text-center">
+                        	<a href="#" class="btn btn-orange">View All</a>
+                        </div><!-- end view-all -->      
+         			</div><!-- end columns -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end vehicle-offers --> 
+        
+        
+        <!--==================== TESTIMONIALS ====================-->
+        <section id="testimonials" class="section-padding back-size">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-sm-12">
+                    	<div class="page-heading white-heading">
+                        	<h2>ĐÁNH GIÁ</h2>
+                            <hr class="heading-line" />
+                        </div><!-- end page-heading -->
+
+                        <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                            <div class="carousel-inner text-center">
+                            
+                                <div class="item active">
+                                    <blockquote>Có nhiều tour hay, là một trong những cty đáp ứng đuợc nhu cầu du lich nhiều nơi, tour mới nhưng người tư vấn, HDV trình độ còn chênh lệch nhiều; giá tour cao nhưng chất lượng chưa tương xứng, chưa có chế độ cụ thể rõ ràng cho khách cũ.</blockquote>
+                                    <div class="rating">
+                                        <span><i class="fa fa-star orange"></i></span>
+                                        <span><i class="fa fa-star orange"></i></span>
+                                        <span><i class="fa fa-star orange"></i></span>
+                                        <span><i class="fa fa-star orange"></i></span>
+                                        <span><i class="fa fa-star lightgrey"></i></span>
+                                    </div><!-- end rating -->
+                                    <small>Jhon Smith</small>
+                                </div><!-- end item -->
+                                
+                                <div class="item">
+                                    <blockquote>Travel Dollars là đơn vị uy tín, tổ chức chuyên nghiệp các chuyến đi chơi nước ngoài. Giá cả ở mức chấp nhận được, nhân viên tư vấn rõ ràng. Công ty nằm ở mặt tiền đường Tú Xương.</blockquote>
+                                    <div class="rating">
+                                        <span><i class="fa fa-star orange"></i></span>
+                                        <span><i class="fa fa-star orange"></i></span>
+                                        <span><i class="fa fa-star orange"></i></span>
+                                        <span><i class="fa fa-star orange"></i></span>
+                                        <span><i class="fa fa-star lightgrey"></i></span>
+                                    </div><!-- end rating -->
+                                            
+                                    <small>Jhon Smith</small>
+                                </div><!-- end item -->
+                                
+                                <div class="item">
+                                    <blockquote>Hãy thay đổi để cảm nhận tốt hơn! Chúng tôi đi du lịch từ những năm 90, đi nhiều nhưng chung qui cũng chỉ chọn vài ba cty du lịch hàng đầu quen thuộc. Vì thói quen, vì quen biết, vì tin tưởng. Vậy thôi, cũng rất tốt mà!</blockquote>
+                                    <div class="rating">
+                                        <span><i class="fa fa-star orange"></i></span>
+                                        <span><i class="fa fa-star orange"></i></span>
+                                        <span><i class="fa fa-star orange"></i></span>
+                                        <span><i class="fa fa-star orange"></i></span>
+                                        <span><i class="fa fa-star lightgrey"></i></span>
+                                    </div><!-- end rating -->
+                                    
+                                    <small>Jhon Smith</small>
+                                </div><!-- end item -->
+                                
+                            </div><!-- end carousel-inner -->
+                            
+                            <ol class="carousel-indicators">
+                                <li data-target="#quote-carousel" data-slide-to="0" class="active"><img src="images/client-1.jpg" class="img-responsive"  alt="client-img">
+                                </li>
+                                <li data-target="#quote-carousel" data-slide-to="1"><img src="images/client-2.jpg" class="img-responsive"  alt="client-img">
+                                </li>
+                                <li data-target="#quote-carousel" data-slide-to="2"><img src="images/client-3.jpg" class="img-responsive"  alt="client-img">
+                                </li>
+                            </ol>
+        
+                        </div><!-- end quote-carousel -->
+                    </div><!-- end columns -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end testimonials --> 
+                
+        
+        <!--================ LATEST BLOG ==============-->
+        <section id="latest-blog" class="section-padding">
+        	<div class="container">
+        		<div class="row">
+        			<div class="col-sm-12">
+                    	<div class="page-heading">
+                        	<h2>Our Latest Blogs</h2>
+                            <hr class="heading-line" />
+                        </div>
+                        
+                        <div class="row">
+                        	
+                             <div class="col-sm-6 col-md-4">
+                                <div class="main-block latest-block">
+                                    <div class="main-img latest-img">
+                                    	<a href="#">
+                                        	<img src="images/latest-blog-1.jpg" class="img-responsive" alt="blog-img" />
+                                        </a>
+                                    </div><!-- end latest-img -->
+                                    
+                                    <div class="latest-info">
+                                    	<ul class="list-unstyled">
+                                        	<li><span><i class="fa fa-calendar-minus-o"></i></span>29 April,2017<span class="author">by: <a href="#">Jhon Smith</a></span></li>
+                                        </ul>
+                                    </div><!-- end latest-info -->
+                                    
+                                    <div class="main-info latest-desc">
+                                    	<div class="row">
+                                        	<div class="col-xs-10 col-sm-10 main-title">
+                                            	<a href="#">Travel Insuranve Benefits</a>
+                                                <p>Veniam delectus ei vis. Est atqui timeam mnesarchum at, pro an eros perpetua ullamcorper.</p>
+                                            </div><!-- end columns -->
+                                        </div><!-- end row -->
+                                        
+                                        <span class="arrow"><a href="#"><i class="fa fa-angle-right"></i></a></span>
+                                    </div><!-- end latest-desc -->
+                                </div><!-- end latest-block -->
+                            </div><!-- end columns -->
+                        	
+                            <div class="col-sm-6 col-md-4">
+                                <div class="main-block latest-block">
+                                    <div class="main-img latest-img">
+                                        <a href="#">
+                                        	<img src="images/latest-blog-2.jpg" class="img-responsive" alt="blog-img" />
+                                        </a>
+                                    </div><!-- end latest-img -->
+                                    
+                                    <div class="latest-info">
+                                    	<ul class="list-unstyled">
+                                        	<li><span><i class="fa fa-calendar-minus-o"></i></span>29 April,2017<span class="author">by: <a href="#">Jhon Smith</a></span></li>
+                                        </ul>
+                                    </div><!-- end latest-info -->
+                                    
+                                    <div class="main-info latest-desc">
+                                    	<div class="row">
+                                        	<div class="col-xs-10 col-sm-10 main-title">
+                                            	<a href="#">Travel Guideline Agents</a>
+                                                <p>Veniam delectus ei vis. Est atqui timeam mnesarchum at, pro an eros perpetua ullamcorper.</p>
+                                            </div><!-- end columns -->
+                                        </div><!-- end row -->
+                                        
+                                        <span class="arrow"><a href="#"><i class="fa fa-angle-right"></i></a></span>
+                                    </div><!-- end latest-desc -->
+                                </div><!-- end latest-block -->
+                             </div><!-- end columns -->
+                             
+                             <div class="col-sm-6 col-md-4">
+                                <div class="main-block latest-block">
+                                    <div class="main-img latest-img">
+                                        <a href="#">
+                                        	<img src="images/latest-blog-3.jpg" class="img-responsive" alt="blog-img" />
+                                        </a>
+                                    </div><!-- end latest-img -->
+                                    
+                                    <div class="latest-info">
+                                    	<ul class="list-unstyled">
+                                        	<li><span><i class="fa fa-calendar-minus-o"></i></span>29 April,2017<span class="author">by: <a href="#">Jhon Smith</a></span></li>
+                                        </ul>
+                                    </div><!-- end latest-info -->
+                                    
+                                    <div class="main-info latest-desc">
+                                    	<div class="row">
+                                        	<div class="col-xs-10 col-sm-10 main-title">
+                                            	<a href="#">Secure Travel Tips</a>
+                                                <p>Veniam delectus ei vis. Est atqui timeam mnesarchum at, pro an eros perpetua ullamcorper.</p>
+                                            </div><!-- end columns -->
+                                        </div><!-- end row -->
+                                        
+                                        <span class="arrow"><a href="#"><i class="fa fa-angle-right"></i></a></span>
+                                    </div><!-- end latest-desc -->
+                                </div><!-- end latest-block -->
+                             </div><!-- end columns -->
+                             
+                        </div><!-- end row -->
+                        
+                        <div class="view-all text-center">
+                        	<a href="#" class="btn btn-orange">View All</a>
+                        </div><!-- end view-all -->  
+                    </div><!-- end columns -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end latest-blog -->         
+        
+        
+        <!--========================= NEWSLETTER-1 ==========================-->
+        <section id="newsletter-1" class="section-padding back-size newsletter"> 
+            <div class="container">
+                <div class="row">
+                	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                        <h2>ĐĂNG KÝ BẢN TIN CỦA CHÚNG TÔI</h2>
+                        <p>ĐĂNG KÍ ĐỂ NHẬN ĐƯỢC ƯU ĐÃI VÀ NHỮNG TOUR MỚI NHẤT VỀ CHÚNG TÔI</p>	
+                        <form>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="email" class="form-control input-lg" placeholder="Nhập địa chỉ Email của bạn" required/>
+                                    <span class="input-group-btn"><button class="btn btn-lg"><i class="fa fa-envelope"></i></button></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div><!-- end columns -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end newsletter-1 -->
+        
+        
+        <!--======================= FOOTER =======================-->
+        <section id="footer" class="ftr-heading-o ftr-heading-mgn-1">
+        
+            <div id="footer-top" class="banner-padding ftr-top-grey ftr-text-white">
+                <div class="container">
+                    <div class="row">
+						
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 footer-widget ftr-contact">
+                            <h3 class="footer-heading"><img src="images/LOGOO.png" class="img-responsive" alt="blog-img" style="width:200px; height:150px; margin-top:-100px"/></h3>
+                            <ul class="list-unstyled">
+                            	<li><span><i class="fa fa-map-marker"></i></span>1 Bùi Xuân Phái, Tây Thạnh, Tân Phú, TP.Hồ Chí Minh</li>
+                            	<li><span><i class="fa fa-phone"></i></span>+0376437459</li>
+                                <li><span><i class="fa fa-envelope"></i></span>phamthivi459@gmail.com</li>
+                            </ul>
+                        </div><!-- end columns -->
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 footer-widget ftr-about">
+                            <h3 class="footer-heading">KẾT NỐI VỚI CHÚNG TÔI</h3>
+                            <p>"Du lịch cho cuộc sống thêm hồng <br />
+                                Travel Dollars tận lòng phục vụ" <br /> 
+                                Liên hệ ngay để được nhận ưu đãi cho chuyến hành trình đầy thú vị của bạn. <br />
+                                Hotline: 1900 6067
+                                
+                            </p>
+                            <ul class="social-links list-inline list-unstyled">
+                            	<li><a href="#"><span><i class="fa fa-facebook"></i></span></a></li>
+                            	<li><a href="#"><span><i class="fa fa-twitter"></i></span></a></li>
+                                <li><a href="#"><span><i class="fa fa-google-plus"></i></span></a></li>
+                                <li><a href="#"><span><i class="fa fa-pinterest-p"></i></span></a></li>
+                                <li><a href="#"><span><i class="fa fa-instagram"></i></span></a></li>
+                                <li><a href="#"><span><i class="fa fa-linkedin"></i></span></a></li>
+                                <li><a href="#"><span><i class="fa fa-youtube-play"></i></span></a></li>
+                            </ul>
+                        </div><!-- end columns -->
+                         <div class="col-xs-12 col-sm-6 col-md-8 col-lg-5 footer-widget ftr-contact">
+                             
+                             <iframe src="https://www.google.com/maps/d/embed?mid=1wBcl2pug0wWHeL4trdlkuhG0VEarevoK" width="100%" height="300"></iframe>
+                        </div><!-- end columns -->
+                    </div><!-- end row -->
+                </div><!-- end container -->
+                 <div id="back-to-top" style="display: block;"><span class="fa fa-angle-up"></span></div>
+            </div><!-- end footer-top -->
+           
+        <script>
+            jQuery(document).ready(function ($) {
+                $(document).ready(function () {
+                    $(window).scroll(function () {
+                        if ($(this).scrollTop() > 50) {
+                            $('.navbar').addClass('moving');
+                            $('#logo').attr('src', 'img/logo-dark.png');
+                        } else {
+                            $('.navbar').removeClass('moving');
+                            $('#logo').attr('src', 'img/logo-light.png');
+                        }
+
+                        if ($(this).scrollTop() > 250) {
+                            $('#back-to-top').fadeIn();
+                        } else {
+                            $('#back-to-top').fadeOut();
+                        }
+                    });
+
+                    $('#back-to-top').click(function () {
+                        return $('body, html').animate({ scrollTop: 0 }, 400), !1;
+                    });
+                });
+            });
+    </script>
+            
+        </section><!-- end footer -->
+        
+        
+        <!-- Page Scripts Starts -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.flexslider.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/custom-navigation.js"></script>
+        <script src="js/custom-flex.js"></script>
+        <script src="js/custom-owl.js"></script>
+        <script src="js/custom-date-picker.js"></script>
+        <script src="js/custom-video.js"></script>
+        <!-- Page Scripts Ends -->
+    </body>
+</html>

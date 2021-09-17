@@ -1,0 +1,8 @@
+﻿@model IEnumerable<QL_Tour.Models.MIEN>
+@{
+    Layout = null;
+}
+ @foreach (var item in Model)
+  {
+      <li><a href="@Url.Action("DSTourTrongNuoc", "LoaiTour", new { @maTour = item.MaMien })">@item.TenMien</a></li> 		
+  }

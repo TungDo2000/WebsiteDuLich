@@ -1,0 +1,193 @@
+﻿@model QL_Tour.Models.TOUR
+@{
+    ViewBag.Title = "ChiTietTour";
+    Layout = "~/Views/Share/Layout.cshtml";
+}
+    @using (Html.BeginForm())
+                {
+              @Html.ValidationSummary(true)
+                                          {
+<section class="innerpage-wrapper">
+        	<div id="tour-details" class="innerpage-section-padding">
+                <div class="container">
+                    <div class="row">        	
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-3 side-bar left-side-bar">
+                            
+                            <div class="side-bar-block booking-form-block">
+                            	<h2 class="selected-price"> @string.Format("{0:0,0}", Model.Gia)</h2>
+
+                            	<div class="booking-form">
+                                	<h3>ĐẶT TOUR</h3>
+                                    <p>Tìm chuyến du lịch mơ ước của bạn ngay hôm nay</p>
+          
+                                    <form>
+                                    	 <div class="form-group right-icon">
+                                            <select class="form-control" name="NguoiHuongDan">
+                                                 <option selected>Trần Văn Quý</option>
+                                                         <option>Nguyễn Văn Tí</option>
+                                                        <option>Bùi Thị Bưởi</option>
+                                                        <option>Trần Văn Tèo</option>
+                                                        <option>Lê Thị Mít</option>
+                                            </select>
+                                            <i class="fa fa-angle-down"></i>
+                                        </div>
+                                       @* <div class="form-group">
+                                    		<input type="text" class="form-control" placeholder="Họ và tên" required/>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                    		<input type="email" class="form-control" placeholder="Email" required/>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                    		<input type="text" class="form-control" placeholder="Phone" required/>
+                                        </div>*@
+                                        
+                                        <div class="form-group">
+                                    		<input type="text" class="form-control dpd3" placeholder="Ngày đặt" name="NgayBD" required/>
+                                        </div>
+                                        
+                                       <div class="form-group">
+                                    		<input type="number" min="1" class="form-control" placeholder="Số lượng người lớn"  name="SL_NguoiLon"/>
+                                        </div>
+                                            <div class="form-group">
+                                    		<input type="number" min="1" class="form-control"  placeholder="Số lượng trẻ em" name="SL_TreEm"/>
+                                                <label style="color:red">&nbsp&nbsp&nbsp&nbsp&nbsp Giảm giá 25%</label>
+                                        </div>
+                                           <div class="form-group">
+                                        <textarea class="form-control" rows="7" style="height:158px; " name="YeuCauThem" placeholder="Yêu cầu thêm"></textarea>
+                                        <span><i class="fa fa-pencil"></i></span>
+                                    </div>
+                                        <div class="form-group right-icon">
+                                            <select class="form-control">
+                                                <option selected>Phương thức thanh toán</option>
+                                                <option>Momo</option>
+                                                <option>Thẻ tín dụng/Ghi nợ</option>
+                                                <option>Ví Airpay</option>
+                                            </select>
+                                            <i class="fa fa-angle-down"></i>
+                                        </div>
+                                        
+                                        <div class="checkbox custom-check">
+                                        	<input type="checkbox" id="check01" name="checkbox"/>
+                                            <label for="check01"><span><i class="fa fa-check"></i></span>Bằng cách tiếp tục, bạn đồng ý với các <a href="#">Điều khoản và điều kiện.</a></label>
+                                        </div>
+                                          <button class="btn btn-orange btn-block"  type="submit">ĐĂNG KÍ</button>
+                                    </form>
+
+                                </div><!-- end booking-form -->
+                            </div><!-- end side-bar-block -->
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-12">
+                                    <div class="side-bar-block main-block ad-block">
+                                        <div class="main-img ad-img">
+                                            <a href="#">
+                                                <img src="images/car-ad.jpg" class="img-responsive" alt="car-ad" />
+                                                <div class="ad-mask">
+                                                    <div class="ad-text">
+                                                        <span>Luxury</span>
+                                                        <h2>Car</h2>
+                                                        <span>Offer</span>
+                                                    </div><!-- end ad-text -->
+                                                </div><!-- end columns -->
+                                            </a>
+                                        </div><!-- end ad-img -->
+                                    </div><!-- end side-bar-block -->
+                                </div><!-- end columns -->
+                                
+                                <div class="col-xs-12 col-sm-6 col-md-12">    
+                                    <div class="side-bar-block support-block">
+                                        <h3>Hỗ trợ</h3>
+                                        <p>Mọi thắc mắc về Tour xin vui lòng liên hệ với chúng tôi</p>
+                                        <div class="support-contact">
+                                            <span><i class="fa fa-phone"></i></span>
+                                            <p>+84 376437459</p>
+                                        </div><!-- end support-contact -->
+                                    </div><!-- end side-bar-block -->
+                                </div><!-- end columns -->
+                                
+                            </div><!-- end row -->
+                        </div><!-- end columns -->
+                        
+                        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 content-side">
+                            
+                            <div class="detail-slider">
+                                <div class="feature-slider">
+                                    <div><img src="~/HinhAnhSP/@Model.CTHinhTour.Hinh1" class="img-responsive" alt="feature-img"/></div>
+                                    <div><img src="~/HinhAnhSP/@Model.CTHinhTour.Hinh2" class="img-responsive" alt="feature-img"/></div>
+                                    <div><img src="~/HinhAnhSP/@Model.CTHinhTour.Hinh3" class="img-responsive" alt="feature-img"/></div>
+                                    <div><img src="~/HinhAnhSP/@Model.CTHinhTour.Hinh4" class="img-responsive" alt="feature-img"/></div>
+                                    <div><img src="~/HinhAnhSP/@Model.CTHinhTour.Hinh5" class="img-responsive" alt="feature-img"/></div>
+                                    <div><img src="~/HinhAnhSP/@Model.CTHinhTour.Hinh6" class="img-responsive" alt="feature-img"/></div>
+                                </div><!-- end feature-slider -->
+                            	
+                                <div class="feature-slider-nav">
+                                    <div><img src="~/HinhAnhSP/@Model.CTHinhTour.Hinh1" class="img-responsive" alt="feature-thumb"/></div>
+                                    <div><img src="~/HinhAnhSP/@Model.CTHinhTour.Hinh2" class="img-responsive" alt="feature-thumb"/></div>
+                                    <div><img src="~/HinhAnhSP/@Model.CTHinhTour.Hinh3" class="img-responsive" alt="feature-thumb"/></div>
+                                    <div><img src="~/HinhAnhSP/@Model.CTHinhTour.Hinh4" class="img-responsive" alt="feature-thumb"/></div>
+                                    <div><img src="~/HinhAnhSP/@Model.CTHinhTour.Hinh5" class="img-responsive" alt="feature-thumb"/></div>
+                                    <div><img src="~/HinhAnhSP/@Model.CTHinhTour.Hinh6" class="img-responsive" alt="feature-thumb"/></div>
+                                </div><!-- end feature-slider-nav -->
+                                <ul class="list-unstyled features tour-features">
+                                	<li><div class="f-icon"><i class="fa fa-wheelchair"></i></div><div class="f-text"><p class="f-heading">GHẾ NGỒI</p><p class="f-data">@Model.SoLuongKhach</p></div></li>
+                                    <li><div class="f-icon"><i class="fa fa-calendar"></i></div><div class="f-text"><p class="f-heading">SỐ NGÀY</p><p class="f-data">@Model.SoNgay</p></div></li>
+                                    <li><div class="f-icon"><i class="fa fa-clock-o"></i></div><div class="f-text"><p class="f-heading">GIẢM GIÁ</p><p class="f-data">10% OFF</p></div></li>
+                                </ul>
+                            </div>  <!-- end detail-slider -->
+
+                            <div class="detail-tabs">
+                            	<ul class="nav nav-tabs nav-justified">
+                                    <li class="active"><a href="#hotel-overview" data-toggle="tab">KHÁCH SẠN</a></li>
+                                    <li><a href="#restaurant" data-toggle="tab">PHƯƠNG TIỆN</a></li>
+                                      <li><a href="#ChitietTour" data-toggle="tab">CHI TIẾT TOUR</a></li>
+                                </ul>
+                            	
+                                <div class="tab-content">
+
+                                    <div id="hotel-overview" class="tab-pane in active">
+                                    	<div class="row">
+                                    		<div class="col-sm-4 col-md-4 tab-img">
+                                        		<img src="~/HinhAnhSP/@Model.KHACHSAN.HinhAnh" class="img-responsive" alt="flight-detail-img" />
+                                            </div><!-- end columns -->
+                                        	
+                                            <div class="col-sm-8 col-md-8 tab-text">
+                                        		<h3>KHÁCH SẠN</h3>
+                                                <p>@Model.KHACHSAN.MoTa</p>
+                                            </div><!-- end columns -->
+                                        </div><!-- end row -->
+                                    </div><!-- end hotel-overview -->
+                                	
+                                    <div id="restaurant" class="tab-pane">
+                                    	<div class="row">
+                                    		<div class="col-sm-4 col-md-4 tab-img">
+                                        		<img src="~/HinhAnhSP/@Model.PHUONGTIEN.HinhAnh" class="img-responsive" alt="flight-detail-img" />
+                                            </div><!-- end columns -->
+                                        	
+                                            <div class="col-sm-8 col-md-8 tab-text">
+                                        		<h3>PHƯƠNG TIỆN</h3>
+                                                <p>@Model.PHUONGTIEN.ghichu</p>
+                                            </div><!-- end columns -->
+                                        </div><!-- end row -->
+                                    </div><!-- end restaurant -->
+
+                                     <div id="ChitietTour" class="tab-pane">
+                                    	<div class="row">
+                                    		
+                                        		<h3>THÔNG TIN TOUR</h3>
+                                                <p>@Model.MoTa</p>
+                                        </div><!-- end row -->
+                                    </div><!-- end restaurant -->
+                                   
+                                </div><!-- end tab-content -->
+                            </div><!-- end detail-tabs -->
+                    </div><!-- end row -->
+            	</div><!-- end container -->
+            </div><!-- end hotel-details -->
+                </div>
+        </section><!-- end innerpage-wrapper -->
+         <!-- Page Scripts Starts -->
+       
+        <!-- Page Scripts Ends -->
+    }}

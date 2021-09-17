@@ -1,0 +1,40 @@
+﻿@model IEnumerable<QL_Tour.Models.TOUR>
+@{
+    ViewBag.Title = "DSTourNgoaiNuoc";
+    Layout = "~/Views/Share/Layout.cshtml";
+}
+
+    <div class="row mx-auto" style="padding-left:10px">
+        <h3 style="text-align:center; color:red;padding:30px">@ViewBag.Loai</h3>
+    @foreach (var item in Model) {
+           <div class="col-sm-6 col-md-4">
+                                <div class="main-block flight-block">
+                                    <a href="@Url.Action("ChiTietTour", "Tour", new { maTour = item.MaTour })">
+                                        <div class="flight-img">
+                                            <img src="~/HinhAnhSP/@item.HinhAnh" class="img-responsive" alt="flight-img" />
+                                        </div><!-- end flight-img -->
+                                        
+                                        <div class="flight-info">
+                                            <div class="flight-title">
+                                                <h3><span class="flight-destination">@item.TenTour</span>|<span class="flight-type">OneWay Flight</span></h3>
+                                            </div><!-- end flight-title -->
+                                            <ul class="list-unstyled list-inline offer-price-1">
+                                                <li class="price">$ @string.Format("{0:0,0}", item.Gia)<span class="pkg">Avg/Person</span></li>
+                                                <li class="rating">
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star orange"></i></span>
+                                                    <span><i class="fa fa-star lightgrey"></i></span>
+                                                </li>
+                                            </ul>
+                                        </div><!-- end flight-info -->
+                                    </a>
+                                </div><!-- end flight-block -->
+                            </div><!-- end columns -->
+    
+    }
+    </div>
+
+
+
